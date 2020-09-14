@@ -227,50 +227,44 @@ dependencies {
 
 }
 
-project.ext.extractedDependenciesDir = 'jar-files'
-
+project.ext.extractedDependenciesDir = 'build'
 task extractAllJars {
     outputs.dir extractedDependenciesDir
     doLast {
         def iter = configurations.testCompileOnly.resolvedConfiguration.resolvedArtifacts.iterator()
-        def dependencyCounter = 0
         while (iter.hasNext()) {
-            //declaring variable as specific class for getting code completion in Android Studio
             org.gradle.api.internal.artifacts.DefaultResolvedArtifact nextDependency = iter.next()
-
             def outputDir = java.nio.file.Paths.get(extractedDependenciesDir, nextDependency.toString()).normalize().toString().replace(':', '_')
-            explodeAar(nextDependency.file, outputDir)
-            dependencyCounter++
-        }
-    }
-}
-
-def explodeAar(File compileDependency, String outputDir) {
-    if (compileDependency.name.endsWith(".aar")) {
-        java.util.jar.JarFile jar = new java.util.jar.JarFile(compileDependency)
-        Enumeration enumEntries = jar.entries()
-        while (enumEntries.hasMoreElements()) {
-            java.util.jar.JarEntry file = (java.util.jar.JarEntry) enumEntries.nextElement()
-            if (file.name.endsWith(".jar")) {
-                def f = new File(outputDir, file.name)
-                new File(f.parent).mkdirs()
-                InputStream is = jar.getInputStream(file)
-                FileOutputStream fos = new FileOutputStream(f)
-                while (is.available() > 0) {
-                    fos.write(is.read())
+            if (nextDependency.file.name.endsWith(".aar")) {
+                java.util.jar.JarFile jar = new java.util.jar.JarFile(nextDependency.file)
+                Enumeration enumEntries = jar.entries()
+                while (enumEntries.hasMoreElements()) {
+                    java.util.jar.JarEntry file = (java.util.jar.JarEntry) enumEntries.nextElement()
+                    if (file.name.endsWith("lint.jar")) {
+                        continue
+                    }
+                    if (file.name.endsWith(".jar")) {
+                        def f = new File(outputDir, file.name)
+                        new File(f.parent).mkdirs()
+                        InputStream is = jar.getInputStream(file)
+                        FileOutputStream fos = new FileOutputStream(f)
+                        while (is.available() > 0) {
+                            fos.write(is.read())
+                        }
+                        fos.close()
+                        is.close()
+                    }
+                    if (file.isDirectory()) {
+                        continue
+                    }
                 }
-                fos.close()
-                is.close()
+                jar.close()
+            } else if (nextDependency.file.name.endsWith(".jar")) {
+                copy {
+                    from nextDependency.file.absolutePath
+                    into outputDir
+                }
             }
-            if (file.isDirectory()) {
-                continue
-            }
-        }
-        jar.close()
-    } else if (compileDependency.name.endsWith(".jar")) {
-        copy {
-            from compileDependency.absolutePath
-            into outputDir
         }
     }
 }
