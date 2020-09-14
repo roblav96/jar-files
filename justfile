@@ -1,7 +1,6 @@
 # use with https://github.com/casey/just
 
 extractAllJars:
-# 	rm -rf build
 	bash gradlew dependencies --configuration testCompileOnly
 	bash gradlew extractAllJars
 
