@@ -1,0 +1,276 @@
+apply plugin: 'java-library'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    google()
+    jcenter()
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+
+    testCompileOnly 'androidx.activity:activity:+'
+    testCompileOnly 'androidx.annotation:annotation-experimental-lint:+'
+    testCompileOnly 'androidx.annotation:annotation-experimental:+'
+    testCompileOnly 'androidx.annotation:annotation:+'
+    testCompileOnly 'androidx.appcompat:appcompat-resources:+'
+    testCompileOnly 'androidx.appcompat:appcompat:+'
+    testCompileOnly 'androidx.arch.core:core-common:+'
+    testCompileOnly 'androidx.arch.core:core-runtime:+'
+    testCompileOnly 'androidx.arch.core:core-testing:+'
+    testCompileOnly 'androidx.asynclayoutinflater:asynclayoutinflater:+'
+    testCompileOnly 'androidx.autofill:autofill:+'
+    testCompileOnly 'androidx.benchmark:benchmark-common:+'
+    testCompileOnly 'androidx.benchmark:benchmark-gradle-plugin:+'
+    testCompileOnly 'androidx.benchmark:benchmark-junit4:+'
+    testCompileOnly 'androidx.biometric:biometric:+'
+    testCompileOnly 'androidx.browser:browser:+'
+    testCompileOnly 'androidx.cardview:cardview:+'
+    testCompileOnly 'androidx.collection:collection:+'
+    testCompileOnly 'androidx.concurrent:concurrent-futures:+'
+    testCompileOnly 'androidx.constraintlayout:constraintlayout-solver:+'
+    testCompileOnly 'androidx.constraintlayout:constraintlayout:+'
+    testCompileOnly 'androidx.contentpager:contentpager:+'
+    testCompileOnly 'androidx.coordinatorlayout:coordinatorlayout:+'
+    testCompileOnly 'androidx.core:core-ktx:+'
+    testCompileOnly 'androidx.core:core:+'
+    testCompileOnly 'androidx.cursoradapter:cursoradapter:+'
+    testCompileOnly 'androidx.customview:customview:+'
+    testCompileOnly 'androidx.databinding:databinding-adapters:+'
+    testCompileOnly 'androidx.databinding:databinding-common:+'
+    testCompileOnly 'androidx.databinding:databinding-compiler-common:+'
+    testCompileOnly 'androidx.databinding:databinding-compiler:+'
+    testCompileOnly 'androidx.databinding:databinding-runtime:+'
+    testCompileOnly 'androidx.databinding:viewbinding:+'
+    testCompileOnly 'androidx.documentfile:documentfile:+'
+    testCompileOnly 'androidx.drawerlayout:drawerlayout:+'
+    testCompileOnly 'androidx.dynamicanimation:dynamicanimation:+'
+    testCompileOnly 'androidx.emoji:emoji-appcompat:+'
+    testCompileOnly 'androidx.emoji:emoji-bundled:+'
+    testCompileOnly 'androidx.emoji:emoji:+'
+    testCompileOnly 'androidx.enterprise:enterprise-feedback-testing:+'
+    testCompileOnly 'androidx.enterprise:enterprise-feedback:+'
+    testCompileOnly 'androidx.exifinterface:exifinterface:+'
+    testCompileOnly 'androidx.fragment:fragment-ktx:+'
+    testCompileOnly 'androidx.fragment:fragment-testing:+'
+    testCompileOnly 'androidx.fragment:fragment:+'
+    testCompileOnly 'androidx.gridlayout:gridlayout:+'
+    testCompileOnly 'androidx.heifwriter:heifwriter:+'
+    testCompileOnly 'androidx.interpolator:interpolator:+'
+    testCompileOnly 'androidx.leanback:leanback-preference:+'
+    testCompileOnly 'androidx.leanback:leanback:+'
+    testCompileOnly 'androidx.legacy:legacy-preference-v14:+'
+    testCompileOnly 'androidx.legacy:legacy-support-core-ui:+'
+    testCompileOnly 'androidx.legacy:legacy-support-core-utils:+'
+    testCompileOnly 'androidx.legacy:legacy-support-v13:+'
+    testCompileOnly 'androidx.legacy:legacy-support-v4:+'
+    testCompileOnly 'androidx.lifecycle:lifecycle-common-java8:+'
+    testCompileOnly 'androidx.lifecycle:lifecycle-common:+'
+    testCompileOnly 'androidx.lifecycle:lifecycle-compiler:+'
+    testCompileOnly 'androidx.lifecycle:lifecycle-extensions:+'
+    testCompileOnly 'androidx.lifecycle:lifecycle-livedata-core:+'
+    testCompileOnly 'androidx.lifecycle:lifecycle-livedata-ktx:+'
+    testCompileOnly 'androidx.lifecycle:lifecycle-livedata:+'
+    testCompileOnly 'androidx.lifecycle:lifecycle-process:+'
+    testCompileOnly 'androidx.lifecycle:lifecycle-reactivestreams:+'
+    testCompileOnly 'androidx.lifecycle:lifecycle-runtime:+'
+    testCompileOnly 'androidx.lifecycle:lifecycle-service:+'
+    testCompileOnly 'androidx.lifecycle:lifecycle-viewmodel-ktx:+'
+    testCompileOnly 'androidx.lifecycle:lifecycle-viewmodel-savedstate:+'
+    testCompileOnly 'androidx.lifecycle:lifecycle-viewmodel:+'
+    testCompileOnly 'androidx.loader:loader:+'
+    testCompileOnly 'androidx.localbroadcastmanager:localbroadcastmanager:+'
+    testCompileOnly 'androidx.media2:media2-common:+'
+    testCompileOnly 'androidx.media2:media2-exoplayer:+'
+    testCompileOnly 'androidx.media2:media2-player:+'
+    testCompileOnly 'androidx.media2:media2-session:+'
+    testCompileOnly 'androidx.media2:media2-widget:+'
+    testCompileOnly 'androidx.media:media:+'
+    testCompileOnly 'androidx.mediarouter:mediarouter:+'
+    testCompileOnly 'androidx.multidex:multidex-instrumentation:+'
+    testCompileOnly 'androidx.multidex:multidex:+'
+    testCompileOnly 'androidx.navigation:navigation-common:+'
+    testCompileOnly 'androidx.navigation:navigation-dynamic-features-fragment:+'
+    testCompileOnly 'androidx.navigation:navigation-dynamic-features-runtime:+'
+    testCompileOnly 'androidx.navigation:navigation-fragment-ktx:+'
+    testCompileOnly 'androidx.navigation:navigation-fragment:+'
+    testCompileOnly 'androidx.navigation:navigation-runtime:+'
+    testCompileOnly 'androidx.navigation:navigation-safe-args-generator:+'
+    testCompileOnly 'androidx.navigation:navigation-safe-args-gradle-plugin:+'
+    testCompileOnly 'androidx.navigation:navigation-testing:+'
+    testCompileOnly 'androidx.navigation:navigation-ui-ktx:+'
+    testCompileOnly 'androidx.navigation:navigation-ui:+'
+    testCompileOnly 'androidx.paging:paging-common:+'
+    testCompileOnly 'androidx.paging:paging-runtime:+'
+    testCompileOnly 'androidx.paging:paging-rxjava2:+'
+    testCompileOnly 'androidx.palette:palette:+'
+    testCompileOnly 'androidx.percentlayout:percentlayout:+'
+    testCompileOnly 'androidx.preference:preference:+'
+    testCompileOnly 'androidx.print:print:+'
+    testCompileOnly 'androidx.recommendation:recommendation:+'
+    testCompileOnly 'androidx.recyclerview:recyclerview-selection:+'
+    testCompileOnly 'androidx.recyclerview:recyclerview:+'
+    testCompileOnly 'androidx.room:room-common:+'
+    testCompileOnly 'androidx.room:room-compiler:+'
+    testCompileOnly 'androidx.room:room-guava:+'
+    testCompileOnly 'androidx.room:room-ktx:+'
+    testCompileOnly 'androidx.room:room-migration:+'
+    testCompileOnly 'androidx.room:room-runtime:+'
+    testCompileOnly 'androidx.room:room-rxjava2:+'
+    testCompileOnly 'androidx.room:room-testing:+'
+    testCompileOnly 'androidx.savedstate:savedstate:+'
+    testCompileOnly 'androidx.sharetarget:sharetarget:+'
+    testCompileOnly 'androidx.slice:slice-builders:+'
+    testCompileOnly 'androidx.slice:slice-core:+'
+    testCompileOnly 'androidx.slice:slice-view:+'
+    testCompileOnly 'androidx.slidingpanelayout:slidingpanelayout:+'
+    testCompileOnly 'androidx.sqlite:sqlite-framework:+'
+    testCompileOnly 'androidx.sqlite:sqlite:+'
+    testCompileOnly 'androidx.swiperefreshlayout:swiperefreshlayout:+'
+    testCompileOnly 'androidx.test.espresso.idling:idling-concurrent:+'
+    testCompileOnly 'androidx.test.espresso.idling:idling-net:+'
+    testCompileOnly 'androidx.test.espresso:espresso-accessibility:+'
+    testCompileOnly 'androidx.test.espresso:espresso-contrib:+'
+    testCompileOnly 'androidx.test.espresso:espresso-core:+'
+    testCompileOnly 'androidx.test.espresso:espresso-idling-resource:+'
+    testCompileOnly 'androidx.test.espresso:espresso-intents:+'
+    testCompileOnly 'androidx.test.espresso:espresso-remote:+'
+    testCompileOnly 'androidx.test.espresso:espresso-web:+'
+    testCompileOnly 'androidx.test.ext:junit:+'
+    testCompileOnly 'androidx.test.ext:truth:+'
+    testCompileOnly 'androidx.test.janktesthelper:janktesthelper:+'
+    testCompileOnly 'androidx.test.uiautomator:uiautomator:+'
+    testCompileOnly 'androidx.test:core:+'
+    testCompileOnly 'androidx.test:monitor:+'
+    testCompileOnly 'androidx.test:rules:+'
+    testCompileOnly 'androidx.test:runner:+'
+    testCompileOnly 'androidx.transition:transition:+'
+    testCompileOnly 'androidx.tvprovider:tvprovider:+'
+    testCompileOnly 'androidx.vectordrawable:vectordrawable-animated:+'
+    testCompileOnly 'androidx.vectordrawable:vectordrawable:+'
+    testCompileOnly 'androidx.versionedparcelable:versionedparcelable:+'
+    testCompileOnly 'androidx.viewpager2:viewpager2:+'
+    testCompileOnly 'androidx.viewpager:viewpager:+'
+    testCompileOnly 'androidx.wear:wear:+'
+    testCompileOnly 'androidx.webkit:webkit:+'
+    testCompileOnly 'androidx.work:work-gcm:+'
+    testCompileOnly 'androidx.work:work-runtime-ktx:+'
+    testCompileOnly 'androidx.work:work-runtime:+'
+    testCompileOnly 'androidx.work:work-rxjava2:+'
+    testCompileOnly 'androidx.work:work-testing:+'
+    testCompileOnly 'com.android.support:appcompat-v7:+'
+    testCompileOnly 'com.android.support:cardview-v7:+'
+    testCompileOnly 'com.android.support:leanback-v17:+'
+    testCompileOnly 'com.android.support:mediarouter-v7:+'
+    testCompileOnly 'com.android.support:recyclerview-v7:+'
+    testCompileOnly 'com.android.support:support-v13:+'
+    testCompileOnly 'com.android.support:support-v4:+'
+    testCompileOnly 'com.android.tools.build:gradle:+'
+    testCompileOnly 'com.firebase:firebase-jobdispatcher:+'
+    testCompileOnly 'com.github.bumptech.glide:compiler:+'
+    testCompileOnly 'com.github.bumptech.glide:glide:+'
+    testCompileOnly 'com.github.spotbugs:spotbugs:+'
+    testCompileOnly 'com.google.ads.interactivemedia.v3:interactivemedia:+'
+    testCompileOnly 'com.google.android.exoplayer:exoplayer-common:+'
+    testCompileOnly 'com.google.android.exoplayer:exoplayer-core:+'
+    testCompileOnly 'com.google.android.exoplayer:exoplayer-dash:+'
+    testCompileOnly 'com.google.android.exoplayer:exoplayer-extractor:+'
+    testCompileOnly 'com.google.android.exoplayer:exoplayer-hls:+'
+    testCompileOnly 'com.google.android.exoplayer:exoplayer-smoothstreaming:+'
+    testCompileOnly 'com.google.android.exoplayer:exoplayer-testutils:+'
+    testCompileOnly 'com.google.android.exoplayer:exoplayer-ui:+'
+    testCompileOnly 'com.google.android.exoplayer:exoplayer:+'
+    testCompileOnly 'com.google.android.exoplayer:extension-cast:+'
+    testCompileOnly 'com.google.android.exoplayer:extension-cronet:+'
+    testCompileOnly 'com.google.android.exoplayer:extension-gvr:+'
+    testCompileOnly 'com.google.android.exoplayer:extension-ima:+'
+    testCompileOnly 'com.google.android.exoplayer:extension-jobdispatcher:+'
+    testCompileOnly 'com.google.android.exoplayer:extension-leanback:+'
+    testCompileOnly 'com.google.android.exoplayer:extension-media2:+'
+    testCompileOnly 'com.google.android.exoplayer:extension-mediasession:+'
+    testCompileOnly 'com.google.android.exoplayer:extension-okhttp:+'
+    testCompileOnly 'com.google.android.exoplayer:extension-rtmp:+'
+    testCompileOnly 'com.google.android.exoplayer:extension-workmanager:+'
+    testCompileOnly 'com.google.android.gms:play-services-ads-identifier:+'
+    testCompileOnly 'com.google.android.gms:play-services-cast-framework:+'
+    testCompileOnly 'com.google.android.gms:play-services-cronet:+'
+    testCompileOnly 'com.google.android.gms:strict-version-matcher-plugin:+'
+    testCompileOnly 'com.google.android.material:material:+'
+    testCompileOnly 'com.google.code.findbugs:jsr305:+'
+    testCompileOnly 'com.google.code.gson:gson:+'
+    testCompileOnly 'com.google.guava:guava:+'
+    testCompileOnly 'com.google.truth:truth:+'
+    testCompileOnly 'com.google.vr:sdk-base:+'
+    testCompileOnly 'com.linkedin.dexmaker:dexmaker-mockito:+'
+    testCompileOnly 'com.linkedin.dexmaker:dexmaker:+'
+    testCompileOnly 'com.novoda:bintray-release:+'
+    testCompileOnly 'com.squareup.okhttp3:logging-interceptor:+'
+    testCompileOnly 'com.squareup.okhttp3:mockwebserver:+'
+    testCompileOnly 'com.squareup.okhttp3:okhttp:+'
+    testCompileOnly 'com.squareup.retrofit2:converter-gson:+'
+    testCompileOnly 'com.squareup.retrofit2:retrofit:+'
+    testCompileOnly 'commons-io:commons-io:+'
+    testCompileOnly 'junit:junit:+'
+    testCompileOnly 'net.butterflytv.utils:rtmp-client:+'
+    testCompileOnly 'org.apache.bcel:bcel:+'
+    testCompileOnly 'org.checkerframework:checker-compat-qual:+'
+    testCompileOnly 'org.checkerframework:checker-qual:+'
+    testCompileOnly 'org.jetbrains.kotlin:kotlin-annotations-jvm:+'
+    testCompileOnly 'org.jetbrains.kotlinx:kotlinx-coroutines-android:+'
+    testCompileOnly 'org.jetbrains.kotlinx:kotlinx-coroutines-core:+'
+    testCompileOnly 'org.mockito:mockito-core:+'
+    testCompileOnly 'org.robolectric:robolectric:+'
+    testCompileOnly 'org.tinylog:tinylog-impl:+'
+
+}
+
+project.ext.extractedDependenciesDir = 'jar-files'
+
+task extractAllJars {
+    outputs.dir extractedDependenciesDir
+    doLast {
+        def iter = configurations.testCompileOnly.resolvedConfiguration.resolvedArtifacts.iterator()
+        def dependencyCounter = 0
+        while (iter.hasNext()) {
+            //declaring variable as specific class for getting code completion in Android Studio
+            org.gradle.api.internal.artifacts.DefaultResolvedArtifact nextDependency = iter.next()
+
+            def outputDir = java.nio.file.Paths.get(extractedDependenciesDir, nextDependency.toString()).normalize().toString().replace(':', '_')
+            explodeAar(nextDependency.file, outputDir)
+            dependencyCounter++
+        }
+    }
+}
+
+def explodeAar(File compileDependency, String outputDir) {
+    if (compileDependency.name.endsWith(".aar")) {
+        java.util.jar.JarFile jar = new java.util.jar.JarFile(compileDependency)
+        Enumeration enumEntries = jar.entries()
+        while (enumEntries.hasMoreElements()) {
+            java.util.jar.JarEntry file = (java.util.jar.JarEntry) enumEntries.nextElement()
+            if (file.name.endsWith(".jar")) {
+                def f = new File(outputDir, file.name)
+                new File(f.parent).mkdirs()
+                InputStream is = jar.getInputStream(file)
+                FileOutputStream fos = new FileOutputStream(f)
+                while (is.available() > 0) {
+                    fos.write(is.read())
+                }
+                fos.close()
+                is.close()
+            }
+            if (file.isDirectory()) {
+                continue
+            }
+        }
+        jar.close()
+    } else if (compileDependency.name.endsWith(".jar")) {
+        copy {
+            from compileDependency.absolutePath
+            into outputDir
+        }
+    }
+}
