@@ -1,9 +1,7 @@
 # use with https://github.com/casey/just
 
-# set shell := ["/usr/bin/env", "-i", "/usr/local/bin/bash", "-l", "-c"]
-
 extractAllJars:
-	rm -rfv build
+# 	rm -rf build
 	bash gradlew dependencies --configuration testCompileOnly
 	bash gradlew extractAllJars
 
