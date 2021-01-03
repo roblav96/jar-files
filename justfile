@@ -20,7 +20,7 @@ extract-all-jars :
 	tree -N -d jar-files
 
 pbcopy-out-paths :
-	just reset out-files
+	rm -r -f out-files
 	cp -r jar-files out-files
 	tree -N -d out-files
 	fd -uu --absolute-path --search-path=out-files --extension=jar --type=file | pbcopy
