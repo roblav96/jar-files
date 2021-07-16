@@ -6,7 +6,8 @@ targetCompatibility = JavaVersion.VERSION_1_8
 repositories {
     google()
     jcenter()
-    maven { url "https://jitpack.io" }
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -200,7 +201,6 @@ dependencies {
     testCompileOnly 'com.firebase:firebase-jobdispatcher:+'
     testCompileOnly 'com.github.bumptech.glide:compiler:+'
     testCompileOnly 'com.github.bumptech.glide:glide:+'
-    testCompileOnly 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer:+'
     testCompileOnly 'com.github.ctiao:DanmakuFlameMaster:+'
     testCompileOnly 'com.github.ctiao:ndkbitmap-armv7a:+'
     testCompileOnly 'com.github.dueeeke.dkplayer:dkplayer-java:+'
@@ -215,7 +215,6 @@ dependencies {
     testCompileOnly 'com.github.spotbugs:spotbugs-annotations:+'
     testCompileOnly 'com.github.spotbugs:spotbugs:3.+'
     testCompileOnly 'com.github.takusemba:rtmppublisher:+'
-    testCompileOnly 'com.github.TeamNewPipe:nanojson:+'
     testCompileOnly 'com.github.TeamNewPipe:NewPipeExtractor:+'
     testCompileOnly 'com.github.vidstige:jadb:+'
     testCompileOnly 'com.github.wseemann:FFmpegMediaMetadataRetriever-core:+'
@@ -251,6 +250,9 @@ dependencies {
     testCompileOnly 'com.google.code.findbugs:jsr305:+'
     testCompileOnly 'com.google.code.gson:gson:+'
     testCompileOnly 'com.google.firebase:firebase-appindexing:+'
+    testCompileOnly 'com.google.firebase:firebase-bom:+'
+    testCompileOnly 'com.google.firebase:firebase-common:+'
+    testCompileOnly 'com.google.firebase:firebase-crashlytics:+'
     testCompileOnly 'com.google.gms:google-services:+'
     testCompileOnly 'com.google.guava:guava:30.0-android'
     testCompileOnly 'com.google.http-client:google-http-client-gson:+'
@@ -321,6 +323,7 @@ dependencies {
     testCompileOnly 'org.apache.bcel:bcel:+'
     testCompileOnly 'org.checkerframework:checker-compat-qual:+'
     testCompileOnly 'org.checkerframework:checker-qual:+'
+    testCompileOnly 'org.chromium.net:cronet-embedded:+'
     testCompileOnly 'org.jellyfin.apiclient:android:+'
     testCompileOnly 'org.jetbrains.anko:anko:+'
     testCompileOnly 'org.jetbrains.kotlin:kotlin-annotations-jvm:+'
