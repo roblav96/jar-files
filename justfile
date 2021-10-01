@@ -1,7 +1,7 @@
 #!/usr/bin/env just --justfile
 # https://github.com/casey/just
 
-set shell := ["bash", "-cu"]
+set shell := ["bash", "-uc"]
 
 
 
