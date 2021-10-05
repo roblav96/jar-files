@@ -3,6 +3,9 @@
 
 set shell := ["bash", "-uc"]
 
+_default :
+	@just --dump
+
 
 
 reset +folders :
