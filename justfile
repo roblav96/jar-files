@@ -26,4 +26,4 @@ pbcopy-out-paths :
 	rm -r -f out-files
 	cp -r jar-files out-files
 	tree -N -d out-files
-	fd -uu --absolute-path --search-path=out-files --extension=jar --type=file | pbcopy
+	fd -uu --search-path=out-files -tf -e jar -a | sed -e '/-ktx\./d' -e '/ktor-/d' | pbcopy
