@@ -26,4 +26,6 @@ pbcopy-out-paths :
 	rm -r -f out-files
 	cp -r jar-files out-files
 	tree -N -d out-files
-	fd -uu --search-path=out-files -tf -e jar -a | sed -e '/-ktx\./d' -e '/ktor-/d' | pbcopy
+	fd -uu --search-path=out-files -tf -e jar -a \
+		| sed -e '/-ktx\./d' -e '/ktor-/d' -e '/kotlin-/d' -e '/kotlinx-/d' \
+		| pbcopy
