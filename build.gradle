@@ -204,7 +204,6 @@ dependencies {
     testCompileOnly 'com.apkfuns.logutils:logutils-no-op:+'
     testCompileOnly 'com.arcao:slf4j-timber:+'
     testCompileOnly 'com.arthenica:ffmpeg-kit-full-gpl:+'
-    testCompileOnly 'com.arthenica:ffmpeg-kit-https:+'
     testCompileOnly 'com.arthenica:smart-exception-common:+'
     testCompileOnly 'com.arthenica:smart-exception-java:+'
     testCompileOnly 'com.danikula:videocache:+'
